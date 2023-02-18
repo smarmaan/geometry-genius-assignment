@@ -131,3 +131,21 @@ document
     serial += 1;
     displayCalculatedData(valuesOfID.cardName, ellipseAreaCM2);
   });
+
+// =========================================================================================================
+// @@@@@@@@@@@@@@@@@@@@@@@@@@  CARD MOUSE ENTER Color change section....  @@@@@@@@@@@@@@@@@@@@@@@@@@
+// =========================================================================================================
+
+const cards = document.querySelectorAll(".card");
+
+for (const card of cards) {
+  let backgroundColorOfCard;
+
+  card.addEventListener("mouseenter", function () {
+    backgroundColorOfCard =
+      "#" + Math.floor(Math.random() * 16777215).toString(16);
+    // 16 stands for hexadecimal code...
+
+    card.style.backgroundColor = backgroundColorOfCard;
+  });
+}
