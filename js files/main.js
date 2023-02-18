@@ -109,3 +109,25 @@ document
     serial += 1;
     displayCalculatedData(valuesOfID.cardName, pentagonAreaCM2);
   });
+
+// =========================================================================================================
+// @@@@@@@@@@@@@@@@@@@@@@@@@@  SIXTH CARD DOM manipulation & creating events....  @@@@@@@@@@@@@@@@@@@@@@@@@@
+// =========================================================================================================
+
+document
+  .getElementById("ellipse-calculate")
+  .addEventListener("click", function () {
+    const valuesOfID = getTheElementsValueById(
+      "ellipse-card",
+      "ellipse-value-a",
+      "ellipse-value-b"
+    );
+
+    const ellipseAreaCM2 = multiplyWithPi(
+      valuesOfID.inputValueBString,
+      valuesOfID.inputValueHString
+    );
+
+    serial += 1;
+    displayCalculatedData(valuesOfID.cardName, ellipseAreaCM2);
+  });
