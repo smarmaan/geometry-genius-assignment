@@ -1,22 +1,25 @@
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  This is the common function to get the   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@       values of input field and           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                 text field                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 function getTheElementsValueById(cardID, inputValue1ID, inputValue2ID) {
+  // ~~~~~~~~~~~~~~~      storing the input value and inner text of elements in a variable...       ~~~~~~~~~~~~~~~
+
   const cardName = document.getElementById(cardID).innerText;
+
   const inputValueBString = document.getElementById(inputValue1ID).value;
+
   const inputValueHString = document.getElementById(inputValue2ID).value;
 
+  // ~~~~~~~~~~~~~~~      clearing the input field using empty string/ Quotation mark....      ~~~~~~~~~~~~~~~
+
   document.getElementById(inputValue1ID).value = "";
+
   document.getElementById(inputValue2ID).value = "";
+
+  //    ~~~~~~~~~~~~~~~      Input validation added...      ~~~~~~~~~~~~~~~
 
   if (
     inputValueBString === "" ||
@@ -28,20 +31,23 @@ function getTheElementsValueById(cardID, inputValue1ID, inputValue2ID) {
     inputValueBString === "undefined" ||
     inputValueHString === "undefined"
   ) {
-    return alert("Please Enter Valid Positive Numbers");
+    return alert("Please Enter Valid Positive Numbers (bigger than 0...) ");
   }
+
+  // ~~~~~~~~~~~~~~~      using alert as return to insure the validation.....      ~~~~~~~~~~~~~~~
 
   const valuesOfID = {
     cardName: cardName,
+
     inputValueBString: inputValueBString,
+
     inputValueHString: inputValueHString,
   };
 
+  // ~~~~~~~~~~~~~~~      using an object variable to return all the values we get from this function...
+
   return valuesOfID;
 }
-
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  This is the common function to display   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -49,13 +55,14 @@ function getTheElementsValueById(cardID, inputValue1ID, inputValue2ID) {
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                 section...                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 function displayCalculatedData(cardName, AreaCM2) {
+  // ~~~~~~~~~~~~~~~      selecting table container to append or push the generated value of table by function....
+
   const container = document.getElementById("table-container");
 
   const tr = document.createElement("tr");
+
+  // ~~~~~~~~~~~~~~~      creating and defining a table row by function... also append as a child of the container....
 
   tr.innerHTML = `
       
@@ -72,6 +79,8 @@ function displayCalculatedData(cardName, AreaCM2) {
       `;
 
   container.appendChild(tr);
+
+  // ~~~~~~~~~~~~~~~      adding the created row by function to table container....      ~~~~~~~~~~~~~~~
 }
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -80,11 +89,20 @@ function displayCalculatedData(cardName, AreaCM2) {
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 function multiplyWithHalf(inputValueBString, inputValueHString) {
+  //~~~~~~~~~~~~~~~      this is the function to calculate the area of an object which's equation supports the both the two amount will be multiply with each other and it will be also multiply with 0.5.
   const AreaCM2Float =
     0.5 * parseFloat(inputValueBString) * parseFloat(inputValueHString);
 
+  // parseFloat used for to convert string value to number value ...
+
   const AreaCM2String = AreaCM2Float.toFixed(2);
+
+  // toFixed refers the decimal value of a number after having to much numbers after the decimal point...
+
   const AreaCM2 = parseFloat(AreaCM2String);
+
+  // converting string value into number and returning it to the function caller...
+
   return AreaCM2;
 }
 
@@ -94,11 +112,19 @@ function multiplyWithHalf(inputValueBString, inputValueHString) {
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 function multiplyWithEachOther(inputValueBString, inputValueHString) {
+  // parseFloat used for to convert string value to number value ...
+
   const AreaCM2Float =
     parseFloat(inputValueBString) * parseFloat(inputValueHString);
 
   const AreaCM2String = AreaCM2Float.toFixed(2);
+
+  // toFixed refers the decimal value of a number after having to much numbers after the decimal point...
+
   const AreaCM2 = parseFloat(AreaCM2String);
+
+  // converting string value into number and returning it to the function caller...
+
   return AreaCM2;
 }
 
@@ -108,10 +134,18 @@ function multiplyWithEachOther(inputValueBString, inputValueHString) {
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 function multiplyWithPi(inputValueBString, inputValueHString) {
+  // parseFloat used for to convert string value to number value ...
+
   const AreaCM2Float =
     3.14 * parseFloat(inputValueBString) * parseFloat(inputValueHString);
 
   const AreaCM2String = AreaCM2Float.toFixed(2);
+
+  // toFixed refers the decimal value of a number after having to much numbers after the decimal point...
+
   const AreaCM2 = parseFloat(AreaCM2String);
+
+  // converting string value into number and returning it to the function caller...
+
   return AreaCM2;
 }

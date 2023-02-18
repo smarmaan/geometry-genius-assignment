@@ -1,5 +1,7 @@
 let serial = 0;
 
+// ~~~~~~~~~~~~~~~      serial variable was declared to count the number every time the calculate button was clicked....
+
 // =========================================================================================================
 // @@@@@@@@@@@@@@@@@@@@@@@@@@   FIRST CARD DOM manipulation & creating events.... @@@@@@@@@@@@@@@@@@@@@@@@@@
 // =========================================================================================================
@@ -13,13 +15,22 @@ document
       "triangle-value-h"
     );
 
+    //  ~~~~~~~~~~~~~~~      using functions and element id to get the values of elements...
+
     const triangleAreaCM2 = multiplyWithHalf(
       valuesOfID.inputValueBString,
       valuesOfID.inputValueHString
     );
 
+    // ~~~~~~~~~~~~~~~      using function to multiply the inputs ....      ~~~~~~~~~~~~~~~
+
     serial += 1;
+
+    // ~~~~~~~~~~~~~~~      increasing the serial to count the amount of button clicked ....      ~~~~~~~~~~~~~~~
+
     displayCalculatedData(valuesOfID.cardName, triangleAreaCM2);
+
+    // ~~~~~~~~~~~~~~~      using function to display the inputs to calculation section....       ~~~~~~~~~~~~~~~
   });
 
 // =========================================================================================================
@@ -35,13 +46,22 @@ document
       "rectangle-value-i"
     );
 
+    //  ~~~~~~~~~~~~~~~      using functions and element id to get the values of elements...
+
     const rectangleAreaCM2 = multiplyWithEachOther(
       valuesOfID.inputValueBString,
       valuesOfID.inputValueHString
     );
 
+    // ~~~~~~~~~~~~~~~      using function to multiply the inputs ....      ~~~~~~~~~~~~~~~
+
     serial += 1;
+
+    // ~~~~~~~~~~~~~~~      increasing the serial to count the amount of button clicked ....      ~~~~~~~~~~~~~~~
+
     displayCalculatedData(valuesOfID.cardName, rectangleAreaCM2);
+
+    // ~~~~~~~~~~~~~~~      using function to display the inputs to calculation section....       ~~~~~~~~~~~~~~~
   });
 
 // =========================================================================================================
@@ -57,13 +77,22 @@ document
       "parallelogram-value-h"
     );
 
+    //  ~~~~~~~~~~~~~~~      using functions and element id to get the values of elements...
+
     const parallelogramAreaCM2 = multiplyWithEachOther(
       valuesOfID.inputValueBString,
       valuesOfID.inputValueHString
     );
 
+    // ~~~~~~~~~~~~~~~      using function to multiply the inputs ....      ~~~~~~~~~~~~~~~
+
     serial += 1;
+
+    // ~~~~~~~~~~~~~~~      increasing the serial to count the amount of button clicked ....      ~~~~~~~~~~~~~~~
+
     displayCalculatedData(valuesOfID.cardName, parallelogramAreaCM2);
+
+    // ~~~~~~~~~~~~~~~      using function to display the inputs to calculation section....       ~~~~~~~~~~~~~~~
   });
 
 // =========================================================================================================
@@ -79,13 +108,21 @@ document
       "rhombus-value-d2"
     );
 
+    //  ~~~~~~~~~~~~~~~      using functions and element id to get the values of elements...
+
     const rhombusAreaCM2 = multiplyWithHalf(
       valuesOfID.inputValueBString,
       valuesOfID.inputValueHString
     );
+    // ~~~~~~~~~~~~~~~      using function to multiply the inputs ....      ~~~~~~~~~~~~~~~
 
     serial += 1;
+
+    // ~~~~~~~~~~~~~~~      increasing the serial to count the amount of button clicked ....      ~~~~~~~~~~~~~~~
+
     displayCalculatedData(valuesOfID.cardName, rhombusAreaCM2);
+
+    // ~~~~~~~~~~~~~~~      using function to display the inputs to calculation section....       ~~~~~~~~~~~~~~~
   });
 
 // =========================================================================================================
@@ -101,13 +138,21 @@ document
       "pentagon-value-b"
     );
 
+    //  ~~~~~~~~~~~~~~~      using functions and element id to get the values of elements...
+
     const pentagonAreaCM2 = multiplyWithHalf(
       valuesOfID.inputValueBString,
       valuesOfID.inputValueHString
     );
+    // ~~~~~~~~~~~~~~~      using function to multiply the inputs ....      ~~~~~~~~~~~~~~~
 
     serial += 1;
+
+    // ~~~~~~~~~~~~~~~      increasing the serial to count the amount of button clicked ....      ~~~~~~~~~~~~~~~
+
     displayCalculatedData(valuesOfID.cardName, pentagonAreaCM2);
+
+    // ~~~~~~~~~~~~~~~      using function to display the inputs to calculation section....       ~~~~~~~~~~~~~~~
   });
 
 // =========================================================================================================
@@ -123,13 +168,21 @@ document
       "ellipse-value-b"
     );
 
+    //  ~~~~~~~~~~~~~~~      using functions and element id to get the values of elements...
+
     const ellipseAreaCM2 = multiplyWithPi(
       valuesOfID.inputValueBString,
       valuesOfID.inputValueHString
     );
+    // ~~~~~~~~~~~~~~~      using function to multiply the inputs ....      ~~~~~~~~~~~~~~~
 
     serial += 1;
+
+    // ~~~~~~~~~~~~~~~      increasing the serial to count the amount of button clicked ....      ~~~~~~~~~~~~~~~
+
     displayCalculatedData(valuesOfID.cardName, ellipseAreaCM2);
+
+    // ~~~~~~~~~~~~~~~      using function to display the inputs to calculation section....       ~~~~~~~~~~~~~~~
   });
 
 // =========================================================================================================
@@ -138,13 +191,24 @@ document
 
 const cards = document.querySelectorAll(".card");
 
+// ~~~~~~~~~~~~~~~      using querySelectorAll to get the array like object of all the card class...
+
 for (const card of cards) {
   let backgroundColorOfCard;
 
+  // declaring a null variable to store the data inside of a function...
+
   card.addEventListener("mouseenter", function () {
+    // every Time mouse will enter the card field this function will generate a random hexadecimal code of color....
+
     backgroundColorOfCard =
       "#" + Math.floor(Math.random() * 16777215).toString(16);
-    // 16 stands for hexadecimal code...
+
+    // here math.floor is used to get the integer value of random number
+
+    // the random value was multiplied because hexadecimal number contains 256 bits.... ( 256 * 256 * 256 )= 16777215
+
+    // to.string(16) stands for hexadecimal code base 16...
 
     card.style.backgroundColor = backgroundColorOfCard;
   });
