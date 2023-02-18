@@ -61,8 +61,7 @@
 
         <section class="card-details mt-5 w-[100%] bg-red-100 gap-9 p-8 mx-auto rounded-2xl drop-shadow-2xl mb-10">
 
-            <h1 class="font-bold text-3xl text-center mb-5 p-5 pt-5 mt-4">What is DOM?.. <br> What is the purpose of
-                DOM..??
+            <h1 class="font-bold text-3xl text-center mb-5 p-5 pt-5 mt-4">What is DOM & what is the purpose of DOM?
             </h1>
 
             <p class="text-justify  md:text-center  text-cyan-800 font-medium mb-7 pb-10 p-5">
@@ -91,7 +90,9 @@
 
         <section class="card-details mt-5 w-[100%] bg-red-100 gap-9 p-8 mx-auto rounded-2xl drop-shadow-2xl mb-10">
 
-            <h1 class="font-bold text-3xl text-center mb-5 p-5 pt-5 mt-4">How can we select elements from DOM..??
+            <h1 class="font-bold text-3xl text-center mb-5 p-5 pt-5 mt-4">How will you select HTML elements using DOM?
+                <br>
+                Name the DOM methods.
             </h1>
 
             <p class="text-justify  md:text-center  text-cyan-800 font-medium mb-7 pb-10 p-5">
@@ -106,17 +107,28 @@
                 <br>
                 1. <strong class="font-bold text-lg text-red-800 underline">getElementById:</strong> This will give us a
                 <strong class="font-bold text-lg text-red-800">specific</strong> element. <br>
+                <strong class="font-bold text-lg text-red-800 underline"> Example : const myElement =
+                    document.getElementById("element-ID"); </strong>
+                <br>
                 2. <strong class="font-bold text-lg text-red-800 underline">getElementsByClassName:</strong> This will
                 select all
                 the elements containing same class name & will give us an <strong
                     class="font-bold text-lg text-red-800">array like object</strong> of those elements. Which can
                 contain bunch of elements as a group. example : <strong
-                    class="font-bold text-lg text-red-800">HTMLCollection(...) [................].</strong><br>
+                    class="font-bold text-lg text-red-800">HTMLCollection(...) [................].</strong> <br>
+                <strong class="font-bold text-lg text-red-800 underline"> Example : const myElements =
+                    document.getElementsByClassName("class-name"); </strong>
+
+                <br>
                 3. <strong class="font-bold text-lg text-red-800 underline">getElementsByTagName:</strong>Similar as the
                 previous. This will select all the elements containing same Tag name & will give us an <strong
                     class="font-bold text-lg text-red-800">array like object</strong> of those elements.
                 example : <strong class="font-bold text-lg text-red-800">HTMLCollection(...)
                     [................].</strong>
+                <br>
+                <strong class="font-bold text-lg text-red-800 underline"> Example : const myParagraphs =
+                    document.getElementsByTagName("h1"); </strong>
+
                 <br>
 
                 4. <strong class="font-bold text-lg text-red-800 underline">querySelector:</strong>This will give us the
@@ -124,12 +136,17 @@
                 whole html tag which contain the specific <strong
                     class="font-bold text-lg text-red-800">class,id,name,index.</strong> We have to use this like a CSS
                 Property. <br>
+
+                <strong class="font-bold text-lg text-red-800 underline"> Example : const myElementID =
+                    document.querySelector("#name-ID"); </strong> <br>
                 5. <strong class="font-bold text-lg text-red-800 underline">querySelectorAll:</strong>This will give us
                 a <strong class="font-bold text-lg text-red-800">NodeList.</strong>
                 like an array like object. It will contain all the elements containing that specific class,id,name or
                 index.
                 <strong class="font-bold text-lg text-red-800">NodeList(...) [................].</strong>
-
+                <br>
+                <strong class="font-bold text-lg text-red-800 underline"> Example : const myElementsByClass =
+                    document.querySelectorAll(".name-class"); </strong>
 
             </p>
 
@@ -176,9 +193,8 @@
 
         <section class="card-details mt-5 w-[100%] bg-red-100 gap-9 p-8 mx-auto rounded-2xl drop-shadow-2xl mb-10">
 
-            <h1 class="font-bold text-3xl text-center mb-5 p-5 pt-5 mt-4">What is Call back function..?? <br> What is
-                the purpose
-                of DOM..??
+            <h1 class="font-bold text-3xl text-center mb-5 p-5 pt-5 mt-4">What is a callback function <br> & why will
+                you use it?
             </h1>
 
             <p class="text-justify  md:text-center  text-cyan-800 font-medium mb-7 pb-10 p-5">Mainly a Callback is a
