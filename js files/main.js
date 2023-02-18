@@ -47,3 +47,25 @@ document
 // =========================================================================================================
 // @@@@@@@@@@@@@@@@@@@@@@@@@@  THIRD CARD DOM manipulation & creating events....  @@@@@@@@@@@@@@@@@@@@@@@@@@
 // =========================================================================================================
+
+document
+  .getElementById("parallelogram-calculate")
+  .addEventListener("click", function () {
+    const valuesOfID = getTheElementsValueById(
+      "parallelogram-card",
+      "parallelogram-value-b",
+      "parallelogram-value-h"
+    );
+
+    const parallelogramAreaCM2 = multiplyWithEachOther(
+      valuesOfID.inputValueBString,
+      valuesOfID.inputValueHString
+    );
+
+    serial += 1;
+    displayCalculatedData(valuesOfID.cardName, parallelogramAreaCM2);
+  });
+
+// =========================================================================================================
+// @@@@@@@@@@@@@@@@@@@@@@@@@@  FOURTH CARD DOM manipulation & creating events....  @@@@@@@@@@@@@@@@@@@@@@@@@@
+// =========================================================================================================
