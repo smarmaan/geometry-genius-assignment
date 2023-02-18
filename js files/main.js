@@ -69,3 +69,21 @@ document
 // =========================================================================================================
 // @@@@@@@@@@@@@@@@@@@@@@@@@@  FOURTH CARD DOM manipulation & creating events....  @@@@@@@@@@@@@@@@@@@@@@@@@@
 // =========================================================================================================
+
+document
+  .getElementById("rhombus-calculate")
+  .addEventListener("click", function () {
+    const valuesOfID = getTheElementsValueById(
+      "rhombus-card",
+      "rhombus-value-d1",
+      "rhombus-value-d2"
+    );
+
+    const rhombusAreaCM2 = multiplyWithHalf(
+      valuesOfID.inputValueBString,
+      valuesOfID.inputValueHString
+    );
+
+    serial += 1;
+    displayCalculatedData(valuesOfID.cardName, rhombusAreaCM2);
+  });
