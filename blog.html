@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+
+
+
+    <!-- ..............................    Important Links are linked over here      .............................. -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@ ~~~~~~~~~~~~~~~~~~~~~~      NAVBAR Section starts from here     ~~~~~~~~~~~~~~~~~~~~~~@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <header class="m-2 sm:m-5 md:m-10 ">
+
+
+        <div class=" bg-sky-100 rounded-3xl drop-shadow-2xl p-5">
+
+
+            <h1 class="ml-6 text-center normal-case text-sm md:text-xl lg:text-3xl text-cyan-600 "><span
+                    class="font-bold text-1xl md:text-3xl">Question</span>
+                <span class="text-1xl md:text-3xl">Answer</span> section
+            </h1>
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+    <main class="card-details mt-5 w-[70%] bg-sky-100 gap-9 p-8 mx-auto rounded-2xl drop-shadow-2xl">
+
+
+
+        <section class="card-details mt-5 w-[100%] bg-red-100 gap-9 p-8 mx-auto rounded-2xl drop-shadow-2xl mb-10">
+
+            <h1 class="font-bold text-3xl text-center mb-5 p-5 pt-5 mt-4">What is DOM?.. <br> What is the purpose of
+                DOM..??
+            </h1>
+
+            <p class="text-center text-cyan-800 font-medium mb-7 pb-10 p-5">
+                DOM stands for <strong class="font-bold text-lg text-red-800">Document Object Model.</strong> As per
+                name, we can
+                easily understand that - <strong class="font-bold text-lg text-red-800"> "It turn documents data into
+                    Object & we can
+                    access them by Node list or other ways."</strong> It works with one of the fundamental programming
+                language called JavaScript. It is a scripted language. DOM basically <strong
+                    class="font-bold text-lg text-red-800">provides a structured representation of the web document or
+                    HTML.</strong>
+                It turn the whole HTML file into several Nodes. Every Tag or elements inside of the HTML file get
+                converted into Nodes. As a result, we can manipulate the HTML file by capturing the nodes of the
+                documents.By manipulating the DOM, we can<strong class="font-bold text-lg text-red-800"> change the
+                    content and
+                    appearance of a web page dynamically, </strong>in response to user actions or events. Like :
+                MouseClick, Mouse Hover,Keypress etc.
+            </p>
+
+        </section>
+
+
+
+
+
+
+        <section class="card-details mt-5 w-[100%] bg-red-100 gap-9 p-8 mx-auto rounded-2xl drop-shadow-2xl mb-10">
+
+            <h1 class="font-bold text-3xl text-center mb-5 p-5 pt-5 mt-4">How can we select elements from DOM..??
+            </h1>
+
+            <p class="text-justify text-cyan-800 font-medium mb-7 pb-10 p-5">
+
+                We can select elements from DOM by <strong class="font-bold text-lg text-red-800">FIVE </strong> ways.
+                Some of those
+                will give us a <strong class="font-bold text-lg text-red-800">individual element </strong> and some will
+                give us a
+                <strong class="font-bold text-lg text-red-800">group of elements </strong>. The Five ways we can select
+                the elements
+                are given below :
+                <br>
+                1. <strong class="font-bold text-lg text-red-800 underline">getElementById:</strong> This will give us a
+                <strong class="font-bold text-lg text-red-800">specific</strong> element. <br>
+                2. <strong class="font-bold text-lg text-red-800 underline">getElementsByClassName:</strong> This will
+                select all
+                the elements containing same class name & will give us an <strong
+                    class="font-bold text-lg text-red-800">array like object</strong> of those elements. Which can
+                contain bunch of elements as a group. example : <strong
+                    class="font-bold text-lg text-red-800">HTMLCollection(...) [................].</strong><br>
+                3. <strong class="font-bold text-lg text-red-800 underline">getElementsByTagName:</strong>Similar as the
+                previous. This will select all the elements containing same Tag name & will give us an <strong
+                    class="font-bold text-lg text-red-800">array like object</strong> of those elements.
+                example : <strong class="font-bold text-lg text-red-800">HTMLCollection(...)
+                    [................].</strong>
+                <br>
+
+                4. <strong class="font-bold text-lg text-red-800 underline">querySelector:</strong>This will give us the
+                <strong class="font-bold text-lg text-red-800">1st element</strong> of a NodeList. This will have the
+                whole html tag which contain the specific <strong
+                    class="font-bold text-lg text-red-800">class,id,name,index.</strong> We have to use this like a CSS
+                Property. <br>
+                5. <strong class="font-bold text-lg text-red-800 underline">querySelectorAll:</strong>This will give us
+                a <strong class="font-bold text-lg text-red-800">NodeList.</strong>
+                like an array like object. It will contain all the elements containing that specific class,id,name or
+                index.
+                <strong class="font-bold text-lg text-red-800">NodeList(...) [................].</strong>
+
+
+            </p>
+
+        </section>
+
+
+
+
+
+
+        <section class="card-details mt-5 w-[100%] bg-red-100 gap-9 p-8 mx-auto rounded-2xl drop-shadow-2xl mb-10">
+
+            <h1 class="font-bold text-3xl text-center mb-5 p-5 pt-5 mt-4">What is Event Bubble..??
+            </h1>
+
+            <p class="text-center text-cyan-800 font-medium mb-7 pb-10 p-5">Event bubbling is a <strong
+                    class="font-bold text-lg text-red-800">behavior</strong> in the Document Object Model which stands
+                for (DOM). Basically event bubbling is a case when we call a function or event it executes all the
+                function or event from the target or child elements to parent elements. Sequence can defer. In this
+                particular behavior there are 3 stages.
+                <br>
+                <strong class="font-bold text-lg text-red-800"> 1. Capture.</strong> <br>
+                <strong class="font-bold text-lg text-red-800">2. Target.</strong> <br>
+                <strong class="font-bold text-lg text-red-800"> 3. Bubble.</strong> <br>
+                At first it travels to the area of function or event to <strong
+                    class="font-bold text-lg text-red-800">execute the event handler.</strong> The travel movement can
+                defer but it basically Travels from parent child to child element.
+                Secondly, it capture the target and then execute it. <br>
+                Third, after executing the child element it travel back to the event function and in the <strong
+                    class="font-bold text-lg text-red-800">traveling back it executes all the event handler it gets on
+                    its way.</strong>
+                <br> To Stop bubbling we can use <strong class="font-bold text-lg text-red-800">STOP
+                    PROPAGATION</strong> or <strong class="font-bold text-lg text-red-800">STOP IMMEDIATE PROPAGATION.
+                </strong>
+            </p>
+
+        </section>
+
+
+
+
+
+
+        <section class="card-details mt-5 w-[100%] bg-red-100 gap-9 p-8 mx-auto rounded-2xl drop-shadow-2xl mb-10">
+
+            <h1 class="font-bold text-3xl text-center mb-5 p-5 pt-5 mt-4">What is Call back function..?? <br> What is
+                the purpose
+                of DOM..??
+            </h1>
+
+            <p class="text-center text-cyan-800 font-medium mb-7 pb-10 p-5">Mainly a Callback is a <strong
+                    class="font-bold text-lg text-red-800"> function passed as an
+                    argument to another function.</strong> This allows a function to call another function in itself. A
+                callback
+                function can run after another function has finished.
+
+                <br>
+                A callback's primary purpose is <strong class="font-bold text-lg text-red-800">to execute codes when
+                    user performs any event, then it response.</strong> These events which can be performed by user,
+                such as mouse clicks or typing. Mostly With a callback, we can <strong
+                    class="font-bold text-lg text-red-800">set a instruction for the application program to execute that
+                    code every time the user clicks a key on the keyboard button.</strong>
+                <br>
+                In JavaScript, parameters are used to pass information to a function. A <strong
+                    class="font-bold text-lg text-red-800">callback function typically
+                    takes one or more parameters</strong> that are passed to it by the calling function. These
+                parameters <strong class="font-bold text-lg text-red-800">provide
+                    data or context </strong> the callback function can use to perform some <strong
+                    class="font-bold text-lg text-red-800">operation</strong> or <strong
+                    class="font-bold text-lg text-red-800">generate</strong> a result.
+            </p>
+
+        </section>
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~            js files are added below.....           ~~~~~~~~~~~~~~~~~ -->
+
+
+
+
+
+    <script src="./js files/utility.js"></script>
+    <script src="./js files/main.js"></script>
+
+
+</body>
+
+</html>
