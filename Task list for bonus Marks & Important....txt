@@ -1,1 +1,40 @@
-half task completed...
+			
+			Task for The bonus Marks... (completed 100%)....	
+
+
+
+
+1. Meaningful minimum 8 commits... ================(Done)...
+
+2.  Organized + Comments...  ================(Done)...
+
+3.  Mobile responsive & card will be placed one after another... ================(Done)....
+
+4. Serial Count (1,2,3,.........) while the button is clicked and the valid output is shown the serial will increase on number table data...  ================(Done)....
+
+5. Function ReUse ( Minimum 2 Functions).... ================(Done)... ********** All tasks were done by reusing same functions.**********
+
+6. Whenever we enter the mouse in the card body, the background color will change randomly...
+
+
+
+
+		********************* Must / Main requirement ******************* 
+		******************************************************************
+
+1.  Result Must be 2 Decimal..... ================(Done)....
+
+2. Triangle and rectangle Validation... ================(Done)....  { All  card's validation Done }
+
+3. Blog page clicked, Different page open... 4 QUESTION...... ================(Done).... 
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   @@@@@@@@        Optional Tasks...  @@@@@@@@  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+1. Convert  to M2 ...... **** Unchecked 
+
+2. adding cross button .. delete field.....  ****Unchecked
+
+3. Edit icon ... input Field hide....    ****Unchecked
