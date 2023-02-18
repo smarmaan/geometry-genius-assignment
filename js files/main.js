@@ -1,8 +1,8 @@
 let serial = 0;
 
-// ===========================================================================================
-// ===========================================================================================
-// FIRST CARD PROCESS....
+// =========================================================================================================
+// @@@@@@@@@@@@@@@@@@@@@@@@@@   FIRST CARD DOM manipulation & creating events.... @@@@@@@@@@@@@@@@@@@@@@@@@@
+// =========================================================================================================
 
 document
   .getElementById("triangle-calculate")
@@ -18,19 +18,32 @@ document
       valuesOfID.inputValueHString
     );
 
-    // const triangleAreaCM2Float =
-    //   0.5 *
-    //   parseFloat(valuesOfID.inputValueBString) *
-    //   parseFloat(valuesOfID.inputValueHString);
-
-    // const triangleAreaCM2String = triangleAreaCM2Float.toFixed(2);
-    // const triangleAreaCM2 = parseFloat(triangleAreaCM2String);
     serial += 1;
     displayCalculatedData(valuesOfID.cardName, triangleAreaCM2);
   });
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//
+// =========================================================================================================
+// @@@@@@@@@@@@@@@@@@@@@@@@@@  SECOND CARD DOM manipulation & creating events.... @@@@@@@@@@@@@@@@@@@@@@@@@@
+// =========================================================================================================
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//
+document
+  .getElementById("rectangle-calculate")
+  .addEventListener("click", function () {
+    const valuesOfID = getTheElementsValueById(
+      "rectangle-card",
+      "rectangle-value-w",
+      "rectangle-value-i"
+    );
+
+    const rectangleAreaCM2 = multiplyWithEachOther(
+      valuesOfID.inputValueBString,
+      valuesOfID.inputValueHString
+    );
+
+    serial += 1;
+    displayCalculatedData(valuesOfID.cardName, rectangleAreaCM2);
+  });
+
+// =========================================================================================================
+// @@@@@@@@@@@@@@@@@@@@@@@@@@  THIRD CARD DOM manipulation & creating events....  @@@@@@@@@@@@@@@@@@@@@@@@@@
+// =========================================================================================================
