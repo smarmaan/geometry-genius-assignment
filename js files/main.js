@@ -87,3 +87,25 @@ document
     serial += 1;
     displayCalculatedData(valuesOfID.cardName, rhombusAreaCM2);
   });
+
+// =========================================================================================================
+// @@@@@@@@@@@@@@@@@@@@@@@@@@  FIFTH CARD DOM manipulation & creating events....  @@@@@@@@@@@@@@@@@@@@@@@@@@
+// =========================================================================================================
+
+document
+  .getElementById("pentagon-calculate")
+  .addEventListener("click", function () {
+    const valuesOfID = getTheElementsValueById(
+      "pentagon-card",
+      "pentagon-value-p",
+      "pentagon-value-b"
+    );
+
+    const pentagonAreaCM2 = multiplyWithHalf(
+      valuesOfID.inputValueBString,
+      valuesOfID.inputValueHString
+    );
+
+    serial += 1;
+    displayCalculatedData(valuesOfID.cardName, pentagonAreaCM2);
+  });
